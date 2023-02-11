@@ -1,0 +1,121 @@
+{"intents": [
+    {"tag": "greeting",
+        "patterns": ["hi", "hello", "whats up", "sup", "is anyone there", "whats good", "hey"],
+        "responses": ["Hey beloved customer", "Hi, I am here to help you", "Welcome, Its good to hear from you"]
+    },
+    {"tag": "confused",
+        "patterns": ["What can I do here", "What can you help me", "I am confused", "Tell me something"],
+        "responses": ["I can negotiate with you on prices to give you discount", "I can help you save money by giving you discount on prices of products you like"]
+    },
+    {"tag": "goodbye",
+        "patterns": ["bye", "cya", "see you later", "goodbye", "im leaving", "have a good day"],
+        "responses": ["Hope you will keep shopping", "It was good talking to you", "Have a good day"]
+    },
+    {"tag": "product",
+        "patterns": ["What products do you have", "show me your products", "What do you sell", "available products"],
+        "responses": [" We have Polo shirt: 4000RWF, Levis pants: 5000RWF, Nike Jordan: 20000RWF"]
+    },
+    {"tag": "product_select",
+        "patterns": ["I want a discount", "can you give me a deduction", "I want a reduction on the price"],
+        "responses": ["Select a product you want a discount on", "Discount on which product"]
+    },
+    {"tag": "available_discounts",
+        "patterns": ["What are the available discounts", "What percentage of discount can you provide"],
+        "responses": ["If you are lucky, you can get a discount up to 40%. What product do you want a discount on?"]
+    },
+
+    {"tag": "perc_discount",
+        "patterns": ["Polo", "Polo shirt", "Levis", "Levis pants", "Jordan", "Nike Jordan"],
+        "responses": ["What percentage would you like for a discount"],
+        "context_set": "discount"
+    },
+    
+    {"tag": "first_discount",
+        "patterns": ["90%", "91%", "92%", "93%", "94%", "95%", "96%","97%","98%","99%", "100%"],
+        "responses": ["That's too much to ask! How about 10%", "Horay, that's alot! can you do 10%"],
+        "context_filter": "discount",
+        "context_set": "discount"
+        
+    },
+    {"tag": "second_discount",
+        "patterns": ["80%", "81%", "82%", "83%", "84%", "86%", "87%", "88%", "89%"],
+        "responses": ["That's too much to ask! How about 20%", "Horay, that's alot! can you do 20%"],
+        "context_filter": "discount",
+        "context_set": "discount"
+        
+    },
+    {"tag": "third_discount",
+        "patterns": ["70%","71%","72%","73%","74%", "75%", "76%","77%","78%","79%"],
+        "responses": ["That's too much to ask! How about 30%", "Horay, that's alot! can you do 30%"],
+        "context_filter": "discount",
+        "context_set": "discount"
+        
+    },
+    {"tag": "fourth_discount",
+        "patterns": ["60%", "61%", "62%", "63%", "64%", "65%","66%", "67%", "68%", "69%"],
+        "responses": ["That's too much to ask! How about 35%", "Horay, that's alot! can you do 35%"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+    {"tag": "fifth_discount",
+        "patterns": ["50%", "51%", "52%", "53%", "54%", "55%", "56%", "57%", "58%", "59%"],
+        "responses": ["That's slightly high! How about 40% off"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+    {"tag": "final_deal",
+        "patterns": ["46%", "47%", "48%", "49%"],
+        "responses": ["Okay final deal is 45%! Say deal to confirm or no deal to cancel"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+    {"tag": "deal1",
+        "patterns": ["1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", "9%", "10%"],
+        "responses": ["You got yourself a deal! Thank you for shopping with us"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+    {"tag": "deal2",
+        "patterns": ["11%", "12%", "13%", "14%", "15%", "16%", "17%", "18%", "19%", "20%"],
+        "responses": ["You got yourself a deal! Thank you for shopping with us"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+    {"tag": "deal3",
+        "patterns": ["11%", "12%", "13%", "14%", "15%", "16%", "17%", "18%", "19%", "20%"],
+        "responses": ["You got yourself a deal! Thank you for shopping with us"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+    {"tag": "deal4",
+        "patterns": ["21%", "22%", "23%", "24%", "25%", "26%", "27%", "28%", "29%", "30%"],
+        "responses": ["You got yourself a deal! Thank you for shopping with us"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+    {"tag": "deal5",
+        "patterns": ["31%", "32%", "33%", "34%", "35%", "36%", "37%", "38%", "39%", "40%"],
+        "responses": ["You got yourself a deal! Thank you for shopping with us"],
+        "context_filter": "discount",
+        "context_set": "discount"
+    },
+
+
+    {"tag": "deal_confirmation",
+        "patterns": ["41%", "42%", "43%", "44%", "45%", "deal", "alright", "no problem", "I agree", "I confirm"],
+        "responses": ["You got yourself a deal! Thank you for shopping with us"],
+        "context_filter": "discount"
+    },
+    
+    {"tag": "no_deal",
+        "patterns": ["no deal", "I can't do it", "There is no deal"],
+        "responses": ["Okay no problem! That's your bad luck"],
+        "context_filter": "discount"
+    }
+]}
