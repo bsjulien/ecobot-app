@@ -56,10 +56,8 @@ def chat(text):
     # Reset the context state since there is no context at the beginning of the conversation
     global context_state
     # This is what the bot will say if it doesn't understand what the user is saying
-    default_responses = ['Sorry, Im not sure I know what you mean! You could try rephrasing that or saying something else!',
-                         'You confuse me human. Lets talk about something else.',
-                         'Im not sure what that means and I dont really care. Lets talk about something else',
-                         'I dont understand that! Try rephrasing or saying something else.']
+    default_responses = [
+        "Internet connection problem or perhaps you said something that I have not been trained on"]
 
     text_bag = bag_ow(text, lem_words, show_details=False)
     response = model.predict(np.array([text_bag]))[0]
